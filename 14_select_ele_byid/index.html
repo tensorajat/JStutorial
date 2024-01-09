@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Query Selector</title>
+    <style>
+        .red-color{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav class="block">
+        <p class="paragraph">Welcome to my website!</p>
+    </nav>
+    <div class="block">
+        <h4>Hey there, my name is <span id="username">Rajat Raghav</span></h4>
+        <p class="block">I am a Web Developer</p>
+        <pre><code>console.log("Hey There")</code></pre>
+    </div>
+    
+    <script>
+            //const el = document.getElementById('username');
+            //el.innerText = "Hey There";
+            //el.classList.add('red-color');
+
+            const elements = document.getElementsByClassName("block");
+            for(let i=0;i<elements.length;i++)
+            {
+                elements.item(i).remove('block');
+            }
+        </script>
+    
+</body>
+</html>

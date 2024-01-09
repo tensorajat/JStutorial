@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Query Selector</title>
+    <style>
+        .red-color{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav class="block">
+        <p class="paragraph">Welcome to my website!</p>
+    </nav>
+    <div class="block">
+        <h4 id="name-block">
+            Hey there, my name is 
+            <span id="username">
+                Rajat Raghav
+            </span></h4>
+        <p class="block">I am a Web Developer</p>
+        <pre><code>console.log("Hey There")</code></pre>
+    </div>
+    
+    <button id ="clickbutton">Click Me</button>
+
+
+    <script>
+        const el = document.getElementById("clickbutton");
+        const nameblock = document.getElementById("name-block");
+
+        /*el.addEventListener("click", () =>
+        {
+            nameblock.style.color = "blue";
+        })
+
+        el.addEventListener("click",function(){
+            const el = document.getElementById("username");
+            el.innerText = "Hey There";
+            el.classList.add('red-color');
+        })
+
+        el.addEventListener("click",() => {
+            if(nameblock.style.color === "red")
+            {
+                nameblock.style.color = "blue";
+            }
+            else{
+                nameblock.style.color = "red";
+            }
+        }
+        );*/
+
+
+        const allchildren = document.querySelector("body").children;
+
+        for(let i=0;i<allchildren.length;i++){
+            allchildren.item(i).addEventListener('click',
+            () => {
+                allchildren.item(i).remove();
+            })
+        }
+
+
+    </script>
+    
+</body>
+</html>

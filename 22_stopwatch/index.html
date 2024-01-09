@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        body {
+          font-family: 'Arial', sans-serif;
+          text-align: center;
+          margin: 50px;
+        }
+        
+        #display {
+          font-size: 4em;
+          margin-bottom: 20px;
+        }
+        
+        #controls {
+          margin-top: 20px;
+        }
+    
+        #laps-container {
+          margin-top: 20px;
+        }
+    
+        #laps {
+          list-style-type: none;
+          padding: 0;
+        }
+      </style>
+</head>
+<body>
+    <h1>Stopwatch</h1>
+    <div id = "display">00:00:00</div>
+    <div id="controls">
+        <button id="start" onclick="startStopwatch()">Start</button>
+        <button id="stop" onclick="stopStopwatch()">Stop</button>
+        <button id="reset" onclick="resetStopwatch()">Reset</button>
+        <button id="lap" onclick="lapStopwatch()">Laps</button>
+    </div>
+    <div id="laps-container">
+        <h2>Laps</h2>
+        <ul id="laps"></ul>
+    </div>      
+    <script src = "script.js"></script>
+</body>
+</html>

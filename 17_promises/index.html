@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Query Selector</title>
+    <style>
+        .red-color{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav class="block">
+        <p class="paragraph">Welcome to my website!</p>
+    </nav>
+    <div class="block">
+        <h4 id="name-block">
+            Hey there, my name is 
+            <span id="username">
+                Rajat Raghav
+            </span></h4>
+        <p class="block">I am a Web Developer</p>
+        <pre><code>console.log("Hey There")</code></pre>
+    </div>
+    
+    <div id="my_container"></div>
+
+    <button id ="clickbutton">Click Me</button>
+
+
+    <script>
+        let a = 10;
+        let b = 20;
+
+        let res = a+b;
+        
+        //async function getData(){
+        //
+        //    let resultFromServer = await fetch(
+        //        "https://jsonplaceholder.typicode.com/posts"
+        //    );
+        //    console.log(await resultFromServer.json());
+        //}
+
+        fetch( "https://jsonplaceholder.typicode.com/posts")
+        .then((data) => {console.log(data);
+        })
+        .catch((err) => {console.log(err);
+        })
+        .finally(() => {console.log("HAHAHAHA")
+        });
+
+        //getData();
+        console.log(res);
+
+    </script>
+    
+</body>
+</html>
